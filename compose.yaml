@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: 'postgres:17.2'
+    container_name: 'friday-postgres'
+    env_file:
+      - .env/docker/postgres.properties
+    ports:
+      - '5432:5432'
+
+  config-server:
+    build:
+      context: ./config-server
+      dockerfile: Dockerfile
+    image: 'friday-config:latest'
+    container_name: 'friday-config'
+    ports:
+      - '8081:8081'
+    volumes:
+      - ./.env/backend:/properties/backend
