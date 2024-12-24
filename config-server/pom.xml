@@ -12,7 +12,7 @@
     </parent>
 
     <groupId>pl.mrotko.friday</groupId>
-    <artifactId>fryday-config</artifactId>
+    <artifactId>friday-config</artifactId>
     <name>friday-config</name>
     <description>friday-config</description>
     <version>1.0-SNAPSHOT</version>

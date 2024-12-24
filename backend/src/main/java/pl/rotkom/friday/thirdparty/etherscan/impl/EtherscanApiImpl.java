@@ -58,6 +58,7 @@ class EtherscanApiImpl implements IEtherscanApi {
                                     .flatMap(dto -> {
                                         if (dto.getStatus().intValue() == 0) {
                                             // todo(mr): better error handling
+                                            // todo (mr): custom jackson deserializer
                                             return Mono.error(new RequestException(String.valueOf(dto.getResult())));
                                         } else {
                                             var items = JsonMapper.convert(

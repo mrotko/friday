@@ -1,4 +1,7 @@
-FROM openjdk:21-jdk-slim
+FROM amazoncorretto:21-alpine
+
+RUN apk update && apk add curl
+
 WORKDIR /app
 
 # Copy the JAR file from the build stage
