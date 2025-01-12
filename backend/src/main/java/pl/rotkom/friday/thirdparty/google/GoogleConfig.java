@@ -29,4 +29,6 @@ public class GoogleConfig {
     private List<String> scopes;
 
     private String apiKey;
+
+    private String credentials;
 }
